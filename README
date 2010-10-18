@@ -1,0 +1,16 @@
+Node-Packer
+
+Author: Stephen Walters <stephenwalters@gmail.com>
+
+This is a binary data packer/unpacker for node.js. Supposedly, it is
+functionally identical to python's struct.pack and struct.unpack, however,
+it is nowhere near identical in practice.
+
+Right now, the byte ordering support is not at all there. That is, the format
+strings' first characters encoding directives (@, or =, or >, or <, or !) are
+ignored completely. Also, only a few encoding types are supported, currently
+just 'b', 'c', 'x', 'I', 'L', and 'B'.
+
+I wrote this as a support structure for another project and just repackaged it
+here, hence it's incompleteness. Being a strong YAGNI supporter, I didn't think
+it was necessary to implement the features I wasn't going to use.
